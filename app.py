@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from flask_cors import CORS
 # from src.auth.auth import auth_bp
@@ -12,4 +14,5 @@ app.register_blueprint(usuario_bp, url_prefix='/usuario')
 app.register_blueprint(registro_bp, url_prefix='/registroFacturas')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
