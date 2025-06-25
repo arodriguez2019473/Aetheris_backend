@@ -8,6 +8,11 @@ from src.tablas.regitroFacturas import registro_bp
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def index():
+    return 'Backend Flask activo!'
+
+
 # Registra los blueprints
 app.register_blueprint(usuario_bp, url_prefix='/usuario')
 app.register_blueprint(registro_bp, url_prefix='/registroFacturas')
