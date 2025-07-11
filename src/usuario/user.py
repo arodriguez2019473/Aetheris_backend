@@ -9,7 +9,6 @@ MSG_USUARIO_CREADO = "El usuario a sido creado"
 MSG_USUARIO_ACTUALIZADO = "Usuario actualizado correctamente"
 MSG_USUARIO_ELIMINADO = "Usuario eliminado correctamente"
 
-# nuevas consultas SQL para postgres
 SQL_INSERT      = "INSERT INTO usuarios (nombre, edad) VALUES (%s, %s) RETURNING id"
 SQL_SELECT_ALL  = "SELECT id, nombre, edad FROM usuarios"
 SQL_SELECT_BY_ID= "SELECT id, nombre, edad FROM usuarios WHERE id = %s"
